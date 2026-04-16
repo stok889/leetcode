@@ -1,5 +1,5 @@
 class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
+    def singleNumberLinearSpace(self, nums: List[int]) -> int:
         n = len(nums)
         m = 3 * 10**4 + 1
         ret = [0 for i in range(2 * m)]
@@ -12,6 +12,14 @@ class Solution:
             if ret[p] == 1:
                 ans = p - m
                 break
+
+        return ans
+
+    def singleNumber(self, nums: List[int]) -> int:
+        n = len(nums)
+        ans = 0
+        for i in range(n):
+            ans ^= nums[i]
 
         return ans
 
