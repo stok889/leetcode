@@ -62,15 +62,3 @@ int main() {
     m = {3,1,3,4,3};
     printf("%d\n", s.maxOperations(m, 6));
 }
-
-/*
-int main() {
-    Solution s;
-    vector<int> m({1,2,3,4});
-     printf("%d\n", s.maxOperations(m, 5));
-    m = {3,1,3,4,3};
-    printf("%d\n", s.maxOperations(m, 6));
-
-    return 0;
-}
-*/
