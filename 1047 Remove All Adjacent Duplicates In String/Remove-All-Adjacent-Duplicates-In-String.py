@@ -20,6 +20,5 @@ if __name__ == "__main__":
     s = Solution()
     print(s.removeDuplicates("abbaza"))
     print(s.removeDuplicates("azxxzy"))
-    print(s.removeDuplicates("aaaaaa"))
     print(s.removeDuplicates("aaaaaaa"))
     
