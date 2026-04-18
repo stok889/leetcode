@@ -15,10 +15,10 @@ class Solution:
     def removeDuplicates(self, s: str) -> str:
         return reduce(lambda ret, c: ret[:-1] if ret[-1:] == c else ret + c, s)
 
-
 if __name__ == "__main__":
     s = Solution()
     print(s.removeDuplicates("abbaza"))
     print(s.removeDuplicates("azxxzy"))
+    print(s.removeDuplicates("aaaaaa"))
     print(s.removeDuplicates("aaaaaaa"))
     
