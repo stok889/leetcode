@@ -9,14 +9,8 @@ public:
         int u = 0;
 
         for (int i = 0; i < n; ++i) {
-            if (s[i] == '*') {
-                ret.pop_back();
-            }
-            else {
-                if (s[i] != '*') {
-                    ret.push_back(s[i]);
-                }
-            }
+            if (s[i] == '*') ret.pop_back();
+            else ret.push_back(s[i]);
         }
         
         return ret;
