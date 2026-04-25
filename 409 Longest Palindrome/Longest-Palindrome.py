@@ -1,5 +1,5 @@
 class Solution:
-    def longestPalindrome(self, s: str) -> int:
+    def longestPalindrome2pass(self, s: str) -> int:
         ret = 0
         n = len(s)
         d = {}
@@ -17,10 +17,36 @@ class Solution:
                 continue
             if x % 2 == 1:
                 f = 1
-            ret += x // 2
-        ret = ret * 2 + f
+                ret += x - 1
+            else:
+                ret += x
+        ret += f
 
         return ret
+
+    def longestPalindrome(self, s: str) -> int:
+        ret = 0
+        n = len(s)
+        d = {}
+        odd = 0
+
+        for c in s:
+            if c not in d:
+                d[c] = 1
+            else:
+                d[c] += 1
+
+            if d[c] % 2 == 1:
+                odd += 1
+            else:
+                odd -= 1
+        
+        ret = n
+        if odd > 0:
+            ret = ret - odd + 1
+
+        return ret
+
 
 if __name__ == "__main__":
     s = Solution()
